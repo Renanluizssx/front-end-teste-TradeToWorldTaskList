@@ -1,16 +1,21 @@
-    form input {
-    padding:5px;
-    border-radius: 3px;
-  }
-  form button {
-    margin-left:15px;
-    background-color: blue;
-    padding:5px;
-    color:white;
-    border:none;
-    border-radius: 5px;
-  }
-  form button:hover {
-    background-color: rgb(0, 0, 223);
-    cursor:pointer;
-  }
+/* Estiliza os campos de entrada dentro de um formulário */
+form input {
+  padding: 5px;
+  border-radius: 3px;
+}
+
+/* Estiliza os botões dentro de um formulário */
+form button {
+  margin-left: 15px;
+  background-color: blue;
+  padding: 5px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+/* Estiliza os botões dentro de um formulário quando o mouse passa por cima */
+form button:hover {
+  background-color: rgb(0, 0, 223);
+  cursor: pointer;
+}
