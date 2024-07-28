@@ -2,6 +2,7 @@
 form input {
   padding: 5px;
   border-radius: 3px;
+  border-color: black;
 }
 
 /* Style the buttons inside a form */
