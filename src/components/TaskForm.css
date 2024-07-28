@@ -1,10 +1,10 @@
-/* Estiliza os campos de entrada dentro de um formulário */
+/* Style the input fields inside a form */
 form input {
   padding: 5px;
   border-radius: 3px;
 }
 
-/* Estiliza os botões dentro de um formulário */
+/* Style the buttons inside a form */
 form button {
   margin-left: 15px;
   background-color: blue;
@@ -14,7 +14,7 @@ form button {
   border-radius: 5px;
 }
 
-/* Estiliza os botões dentro de um formulário quando o mouse passa por cima */
+/* Style the buttons inside a form when the mouse hovers over them */
 form button:hover {
   background-color: rgb(0, 0, 223);
   cursor: pointer;

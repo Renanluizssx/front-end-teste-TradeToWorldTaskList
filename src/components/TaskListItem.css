@@ -1,4 +1,4 @@
-/* Estiliza os botões de itens da lista de tarefas */
+/* Style the buttons for task list items */
 .task-list-item-button {
   background-color: #dc3545;
   color: #fff;
@@ -10,18 +10,18 @@
   margin-top: 5px;
 }
 
-/* Estiliza os botões de itens da lista de tarefas ao passar o mouse por cima */
+/* Style the buttons for task list items when the mouse hovers over them */
 .task-list-item-button:hover {
   background-color: #c82333;
 }
 
-/* Estiliza os itens da lista de tarefas */
+/* Style the task list items */
 .task-item {
   display: flex;
   justify-content: space-between;
 }
 
-/* Estiliza os spans dentro dos itens da lista de tarefas */
+/* Style the spans inside the task list items */
 .task-item span {
   font-size: 20px;
 }

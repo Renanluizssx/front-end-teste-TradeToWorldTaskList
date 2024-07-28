@@ -1,12 +1,15 @@
 import React from "react";
 import TaskListItem from "./TaskListItem";
-import "./TaskListItem.css"
+import "./TaskListItem.css";
+
+// Define the interface for a task
 interface Task {
   id: number;
   title: string;
   completed: boolean;
 }
 
+// Define the props for the TaskList component
 interface TaskListProps {
   tasks: Task[];
   onToggleComplete: (id: number) => void;

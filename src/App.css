@@ -1,14 +1,14 @@
-/* Define a família de fontes padrão para todo o documento */
+/* Define the default font family for the entire document */
 * {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/* Define a cor de fundo do corpo do documento */
+/* Set the background color for the body of the document */
 body {
   background-color: blue;
 }
 
-/* Estiliza um contêiner centralizado */
+/* Style a centered container */
 .container {
   max-width: 800px;
   margin: 0 auto;
@@ -18,7 +18,7 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Estiliza o título dentro do contêiner */
+/* Style the title inside the container */
 .title {
   text-align: center;
   color: #333;
@@ -27,7 +27,7 @@ body {
   font-weight: bold;
 }
 
-/* Estiliza a seção de estatísticas de tarefas dentro do contêiner */
+/* Style the task statistics section inside the container */
 .task-stats {
   margin-top: 20px;
   font-size: 1.1rem;
@@ -36,7 +36,7 @@ body {
   flex-direction: column;
 }
 
-/* Estiliza os parágrafos dentro da seção de estatísticas de tarefas */
+/* Style the paragraphs inside the task statistics section */
 .task-stats p {
   margin: 5px 0;
 }
