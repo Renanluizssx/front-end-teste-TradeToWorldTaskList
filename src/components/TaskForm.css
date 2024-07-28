@@ -1,0 +1,16 @@
+    form input {
+    padding:5px;
+    border-radius: 3px;
+  }
+  form button {
+    margin-left:15px;
+    background-color: blue;
+    padding:5px;
+    color:white;
+    border:none;
+    border-radius: 5px;
+  }
+  form button:hover {
+    background-color: rgb(0, 0, 223);
+    cursor:pointer;
+  }

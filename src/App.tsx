@@ -1,25 +1,68 @@
+import React, { useState, useEffect } from "react";
 import "./App.css";
+import TaskList from "./components/TaskList";
+import TaskForm from "./components/TaskForm";
 
-// TODO: Create a new component called `TaskList` in the `components` folder
-// TODO: Create a new component called `TaskForm` in the `components` folder
-// TODO: Create a new component called `TaskListItem` in the `components` folder
+interface Task {
+  id: number;
+  title: string;
+  completed: boolean;
+}
 
-// TODO: A user should be able to see a list of tasks
-// TODO: A user should be able to add a new task to the list (with a title)
-// TODO: A user should be able to delete a task from the list
-// TODO: A user should be able to mark a task as complete
-// TODO: A user should be able to distinguish between completed and incomplete tasks
-// TODO: A user should be able to count the total number of tasks
-// TODO: A user should be able to count the number of completed tasks
-// TODO: A user should be able to count the number of incomplete tasks
+const App: React.FC = () => {
+  const [tasks, setTasks] = useState<Task[]>([]);
 
-function App() {
+  // Carregar tarefas do localStorage quando o componente for montado
+  useEffect(() => {
+    const savedTasks = localStorage.getItem("tasks");
+    if (savedTasks) {
+      setTasks(JSON.parse(savedTasks));
+    }
+  }, []);
+
+  // Salvar tarefas no localStorage apenas se houver tarefas
+  useEffect(() => {
+    if (tasks.length > 0) {
+      localStorage.setItem("tasks", JSON.stringify(tasks));
+    } else {
+      localStorage.removeItem("tasks");
+    }
+  }, [tasks]);
+
+  const handleAddTask = (title: string) => {
+    if (title.trim() === "") return; // Não adiciona tarefas com título vazio
+    const newTask: Task = { id: Date.now(), title, completed: false };
+    setTasks(prevTasks => [...prevTasks, newTask]);
+  };
+
+  const handleToggleComplete = (taskId: number) => {
+    setTasks(prevTasks =>
+      prevTasks.map(task =>
+        task.id === taskId ? { ...task, completed: !task.completed } : task
+      )
+    );
+  };
+
+  const handleDeleteTask = (taskId: number) => {
+    setTasks(prevTasks => prevTasks.filter(task => task.id !== taskId));
+  };
+
+  const totalTasks = tasks.length;
+  const completedTasks = tasks.filter(task => task.completed).length;
+  const incompleteTasks = totalTasks - completedTasks;
+
   return (
     <div className="container">
-      <h1 className="title">trade to world task list</h1>
-      {/* Add components here... */}
+      <h1 className="title">Trade to World Task List</h1>
+      <TaskForm onAddTask={handleAddTask} />
+      <TaskList tasks={tasks} onToggleComplete={handleToggleComplete} onDelete={handleDeleteTask} />
+      <div className="task-stats">
+        <p>Total Tasks: {totalTasks}</p>
+        <p>Completed Tasks: {completedTasks}</p>
+        <p>Incomplete Tasks: {incompleteTasks}</p>
+      </div>
     </div>
   );
-}
+};
 
 export default App;

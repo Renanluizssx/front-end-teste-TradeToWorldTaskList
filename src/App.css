@@ -1,11 +1,33 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+body {
+  background-color: blue;
+}
 .container {
-  height: 100vh;
-  margin: 0 8rem;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  
+}
+.title {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 2rem;
+  font-weight: bold;
+}
+.task-stats {
+  margin-top: 20px;
+  font-size: 1.1rem;
+  color: #333;
+  text-align: center;
+  flex-direction: column;
 }
 
-.title {
-  padding: 1rem;
-  text-align: center;
-  letter-spacing: 0.2rem;
-  text-transform: capitalize;
+.task-stats p {
+  margin: 5px 0;
 }
