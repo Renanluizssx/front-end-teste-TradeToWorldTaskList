@@ -12,7 +12,7 @@ interface Task {
 const App: React.FC = () => {
   const [tasks, setTasks] = useState<Task[]>([]);
 
-  // Carregar tarefas do localStorage quando o componente for montado
+
   useEffect(() => {
     const savedTasks = localStorage.getItem("tasks");
     if (savedTasks) {
@@ -20,7 +20,7 @@ const App: React.FC = () => {
     }
   }, []);
 
-  // Salvar tarefas no localStorage apenas se houver tarefas
+
   useEffect(() => {
     if (tasks.length > 0) {
       localStorage.setItem("tasks", JSON.stringify(tasks));
@@ -30,7 +30,7 @@ const App: React.FC = () => {
   }, [tasks]);
 
   const handleAddTask = (title: string) => {
-    if (title.trim() === "") return; // Não adiciona tarefas com título vazio
+    if (title.trim() === "") return;
     const newTask: Task = { id: Date.now(), title, completed: false };
     setTasks(prevTasks => [...prevTasks, newTask]);
   };

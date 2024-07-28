@@ -1,5 +1,5 @@
 import React from "react";
-import "./TaskListItem.css"; // Importa o CSS específico para o TaskListItem
+import "./TaskListItem.css";
 
 interface Task {
   id: number;
