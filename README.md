@@ -14,4 +14,4 @@
   Passos para executar o projeto
 
   1 - npm install --save-dev webpack webpack-cli webpack-dev-server
-  2  npm run start
+  2 - npm run start
